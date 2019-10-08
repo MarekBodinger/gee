@@ -1,0 +1,17 @@
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+
+@Component({
+    selector: 'e-{{kebabCaseComponentName}}',
+    templateUrl: '{{kebabCaseComponentName}}.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    preserveWhitespaces: true,
+})
+export class {{pascalCaseComponentName}}Component implements OnInit {
+    constructor(
+        
+    ) {}
+
+    ngOnInit() {
+        
+    }
+}
