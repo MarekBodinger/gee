@@ -41,11 +41,11 @@ async function generateFiles(answers) {
     const kebabCaseComponentName = kebabCase(answers.componentName);
     const camelCaseComponentName = camelCase(answers.componentName);
     const pascalCaseComponentName = camelCase(answers.componentName, { pascalCase: true });
-const context = {
-  kebabCaseComponentName,
-  camelCaseComponentName,
-  pascalCaseComponentName,
-};
+    const context = {
+        kebabCaseComponentName,
+        camelCaseComponentName,
+        pascalCaseComponentName,
+    };
 
     const tsTemplate = fs.readFileSync(path.resolve(__dirname, '../templates/ts'), 'utf8');
     const tsGenerated = mustache.render(tsTemplate, context);
