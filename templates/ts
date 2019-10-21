@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
     selector: 'e-{{kebabCaseComponentName}}',
     templateUrl: '{{kebabCaseComponentName}}.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    preserveWhitespaces: true,
+    preserveWhitespaces: false,
 })
 export class {{pascalCaseComponentName}}Component implements OnInit {
     constructor(
