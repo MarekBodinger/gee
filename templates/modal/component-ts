@@ -1,0 +1,21 @@
+import { Component, Inject, OnInit } from '@angular/core';
+
+@Component({
+    selector: 'e-{{kebabCaseName}}-modal',
+    templateUrl: './{{kebabCaseName}}-modal.component.html',
+})
+export class {{pascalCaseName}}ModalComponent implements OnInit {
+    constructor(
+        @Inject(MODAL_UI_DATA) private modalData: {{pascalCaseName}}ModalData,
+        @Inject(MODAL_UI_OUTPUTS) private modalOutputs: ModalOutputs<{{pascalCaseName}}ModalOutputs>,
+        @Inject(MODAL_UI_EXTRAS) private modalExtras: ModalExtras,
+    ) {}
+
+    ngOnInit() {
+
+    }
+
+    close() {
+        this.modalExtras.close();
+    }
+}

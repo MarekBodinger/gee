@@ -1,0 +1,34 @@
+import { Injectable } from '@angular/core';
+import { {{pascalCaseName}}ModalData, {{pascalCaseName}}ModalOutputs } from './{{kebabCaseName}}-modal.types';
+import { {{pascalCaseName}}ModalComponent } from './{{kebabCaseName}}-modal.component';
+
+@Injectable({ providedIn: 'root' })
+export class {{pascalCaseName}}ModalService {
+    constructor(private modalService: ModalService) {}
+
+    open(data: any) {
+        const modalPromise = this.modalService.open<
+            {{pascalCaseName}}ModalComponent,
+            {{pascalCaseName}}ModalData,
+            {{pascalCaseName}}ModalOutputs
+        >(
+            import('./{{kebabCaseName}}-modal.module').then(m => m.{{pascalCaseName}}ModalModule),
+            {
+                data: {
+                    data,
+                },
+                outputs: ['output'],
+            },
+        );
+
+        modalPromise.then(modal => {
+            modal.onClose.then(() => {}
+            
+            );
+            
+            modal.outputs.output.subscribe((output) => {
+                
+            }) 
+        });
+    }
+}

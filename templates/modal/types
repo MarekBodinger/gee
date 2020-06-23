@@ -1,0 +1,7 @@
+export interface {{pascalCaseName}}ModalData {
+    data: any;
+} 
+
+export interface {{pascalCaseName}}ModalOutputs {
+    output: any;
+}

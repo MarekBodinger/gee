@@ -1,0 +1,11 @@
+<e-ui-modal>
+    <ng-template #header>
+        <h1 class="ui">
+            
+        </h1>
+    </ng-template>
+    <ng-template #body>
+    </ng-template>
+    <ng-template #footer>
+    </ng-template>
+</e-ui-modal>

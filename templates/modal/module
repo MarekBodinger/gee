@@ -1,0 +1,20 @@
+import { CommonModule } from '@angular/common';
+import { ComponentFactoryResolver, NgModule } from '@angular/core';
+import { {{pascalCaseName}}ModalComponent } from './{{kebabCaseName}}-modal.component';
+
+@NgModule({
+    imports: [
+        CommonModule,
+        UiModule,
+        ModalUiModule,
+    ],
+    declarations: [{{pascalCaseName}}ModalComponent],
+    exports: [{{pascalCaseName}}ModalComponent],
+})
+export class {{pascalCaseName}}ModalModule implements ModalModuleInterface<{{pascalCaseName}}ModalComponent> {
+    constructor(private resolver: ComponentFactoryResolver) {}
+
+    getMetadata() {
+        return { resolver: this.resolver, component: {{pascalCaseName}}ModalComponent };
+    }
+}
